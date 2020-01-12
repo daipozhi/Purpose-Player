@@ -1,5 +1,49 @@
 # Purpose-Player
 
+Purpose player 2.0.2
+
+  this is a open source software,based on ffmpeg,play audio and video,
+on Windows and Ubuntu.
+
+  there is a directory "ffmpeg-3.1.5-src-v2.0.2",it only have two files,ffplay.c and cmdutils.c,
+decompress ffmpeg-3.1.5.tar.gz,it create a directory "ffmpeg-3.1.5", use ffplay.c and cmdutils.c
+in directory "ffmpeg-3.1.5-src-v2.0.2" replace ffplay.c and cmdutils.c in directory "ffmpeg-3.1.5",
+and compile it like ffmpeg, copy ffplay.exe to "app" directory,then you can play meida file.
+
+  it can display "sound river",it separate audio to 70 parts by frequency,display it like a river,
+(use mouse click button "River On" and wait 3 seconds),in the bottom(red) is 20khz audio,in the up(blue)
+is 20hz audio,river moves from left to right.
+
+  it can process 2.0 channel audio and 5.1 channel audio,only display left channel(1 channel) audio.
+
+  How to compile:
+    in windows, you need install msys+mingw, in Ubuntu, every thing is ready,
+
+    decompress yasm-1.3.0.tar.gz and run
+    ./configure
+    make
+    sudo make install
+
+    decompress SDL-1.2.15.src.tar.gz and run
+    ./configure
+    make
+    sudo make install
+
+    then goto directory "ffmpeg-3.1.5" and run (ffplay.c and cmdutils.c should already been replaced)
+    ./configure
+    make
+    sudo make install
+    copy ffplay.exe to app directory
+
+  you can run ffplay.exe in Windows and Ubuntu 12.04 ,if your Ubuntu is 14.04 or 16.04,you need
+install SDL,decompress SDL-1.2.15-1.i386.rpm,copy all file in usr/lib to /usr/lib.
+(sudo cp -r ./usr/* /usr)
+
+  In Ubuntu,if you compiled ffplay.exe, and want to run it , you need goto directory "SDL-1.2.15",
+run command "sudo make uninstall"(unload develop library).
+
+
+
 小戴媒体播放器  2.0.2
 
  
